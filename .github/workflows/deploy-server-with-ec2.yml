@@ -41,8 +41,8 @@ jobs:
           #          pemkey를 통해 해당 인스턴스에 접근
           key: ${{secrets.EC2_PEMKEY}}
           script: |
-              sudo apt-get update && sudo apt-get install openjdk-11-jdk -y
             if ! type java > /dev/null; then
+              sudo apt-get update && sudo apt-get install openjdk-11-jdk -y
             else
               echo "java is already installed"
             fi
